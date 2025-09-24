@@ -55,22 +55,22 @@ Now that your domain is added, you can create a tunnel by clicking on the “Zer
 
 **On the Configuration Page:**
 
-1. Select the operating system your service is running on. (e.g. Debian)
+1. Select the operating system your service is running on (e.g. Debian).
 
 ![Screenshot 2025-09-23 190739.png](Screenshot_2025-09-23_190739.png)
 
 1. Open a terminal on the device with the service.
 2. Run the first set of commands on the configuration page within your terminal. This installs Cloudflared on your device.
-3. Once complete, run the second command provided, this will run the tunnel and install a service or automatically run the tunnel every time your machine is rebooted.
+3. Once complete, run the second command provided, this will run the tunnel and install a service to automatically run the tunnel every time your machine is rebooted.
 4. If everything ran smoothly, you should now be able to click “Next” to connect your domain to your device.
 
 **Route Tunnel Page:**
 
-1. On this page, select the domain your domain.
-2. You can also add a subdomain (recommended if you have a specific service you need to connect to e.g. n8n, Portainer, Plex, etc.)
-3. Select the type of traffic either http or https (HTTPS requires your domain to have an SSL certificate which can also be obtained through Cloudflare)
+1. On this page, select your domain.
+2. You can also add a subdomain (recommended if you have a specific service you need to connect to e.g. n8n, Portainer, Plex, etc.).
+3. Select the type of traffic either http or https (HTTPS requires your domain to have an SSL certificate which can also be obtained through Cloudflare).
     1. **Important Note:** You can select HTTP here even if your public site uses HTTPS. Cloudflare handles the public-facing HTTPS encryption for you. This setting only determines how the tunnel connects to your local service on your private network, which is typically HTTP.
-4. Type the private IP address of the device running Cloudflared and include the port of the service. (e.g. **192.168.4.114:5678** OR **localhost:5678**)
+4. Type the private IP address of the device running Cloudflared and include the port of the service. (e.g. **192.168.4.114:5678** OR **localhost:5678**).
 
 ![image.png](image.png)
 
@@ -88,8 +88,8 @@ Now we'll place a secure login screen in front of your n8n instance using Cloudf
 
 Firstly, you’ll need to make sure OTP is added as an authentication method in your “Zero Trust” page.
 
-1. On the left side bar of the “Zero Trust” page, click settings (At the very bottom)
-2. Click on “Authentication”
+1. On the left side bar of the “Zero Trust” page, click settings (At the very bottom).
+2. Click on “Authentication”.
 3. Make sure Login methods include “One-time PIN”, if not simply add it by clicking on “Add new”, then selecting it.
 
 ![authentication-settings.png](authentication-settings.png)
@@ -109,17 +109,17 @@ After you’ve verified that OTP is enabled, we need to create a Policy. This is
 
 ### Application Setup
 
-1. On the left side menu, click on the “Access” dropdown, then select “Applications”
-2. Here is where you’ll tell Cloudflare where to find the Application you want to protect
+1. On the left side menu, click on the “Access” dropdown, then select “Applications”.
+2. Here is where you’ll tell Cloudflare where to find the Application you want to protect.
 
 ![Applications.png](Applications.png)
 
-1. Click on “Add Application”, then select “Self-Hosted”
+1. Click on “Add Application”, then select “Self-Hosted”.
 
 ![add an application.png](add_an_application.png)
 
 1. Under the “Basic Information“ block, give your application a name e.g. n8n. Keep the duration set to default.
-2. Click on “Add a public hostname” and add your domain. (include subdomain if you created one earlier)
+2. Click on “Add a public hostname” and add your domain. (include subdomain if you created one earlier).
 3. Under the “Access Policies” block, click on “Select existing policies” then select the policy we created earlier.
 
 ![Application-Settings.png](Application-Settings.png)
