@@ -1,7 +1,6 @@
 # Cloudflare Tunnel
 
-Created by: Shadi A
-Created time: September 23, 2025 6:27 PM
+Created by: Shadi A | September 23, 2025 6:27 PM
 
 # Overview
 
