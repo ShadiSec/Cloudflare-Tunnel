@@ -2,6 +2,18 @@
 
 Created by: Shadi A | September 23, 2025 6:27 PM
 
+**Table of Contents**
+1. [Introduction](#Overview)
+2. [Cloudflare Tunnel](#What-is-a-Cloudflare-Tunnel)
+3. [Tunnel Setup](#Tunnel-Setup)
+   - [Creating a Cloudflare Account](#Creating-a-Cloudflare-Account)
+   - [Adding a Domain](#Adding-a-Domain)
+4. [Disclaimer](#Disclaimer)
+5. [Securing Your Application with a Login Page](#Securing-Your-Application-with-a-Login-Page)
+   - [Authentication](#Authentication)
+   - [Policy Setup](#Policy-Setup)
+   - [Application Setup](#Application-Setup)
+
 # Overview
 
 In this guide I will walk you through the steps I took to setup a Cloudflare tunnel to access my local n8n instance through a public domain. Doing so allows you to integrate services like Gmail, Telegram, or WhatsApp if your n8n instance is installed on a home server and cannot be accessed via localhost.
